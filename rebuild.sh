@@ -1,3 +1,5 @@
+export CUDA_INSTALL_PATH=/usr/local/cuda-11.0
+export PATH=$CUDA_INSTALL_PATH/bin:$PATH
 source ./gpu-simulator/setup_environment.sh
 
 # Build with make
