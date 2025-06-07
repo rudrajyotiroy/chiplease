@@ -73,8 +73,8 @@ if [ -z "$GPGPUSIM_SETUP_ENVIRONMENT_WAS_RUN" -o ! -d "$GPGPUSIM_ROOT" ]; then
         if [ -z $user_branch ] ; then
             user_branch=$GPGPUSIM_BRANCH
         fi
-        git clone $user_repo $ACCELSIM_ROOT/gpgpu-sim
-        git -C $ACCELSIM_ROOT/gpgpu-sim/ checkout $user_branch
+        # git clone $user_repo $ACCELSIM_ROOT/gpgpu-sim
+        # git -C $ACCELSIM_ROOT/gpgpu-sim/ checkout $user_branch
     else
         echo "Found $ACCELSIM_ROOT/gpgpu-sim, using existing local location. Not sycning anything."
     fi
