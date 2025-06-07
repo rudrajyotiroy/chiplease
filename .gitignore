@@ -1,6 +1,7 @@
 env-setup/
 gpu-app-collection/
-hw_run/
+hw_run
+!hw_run/ubench/11.0/l1_bw_32f_unroll_large/NO_ARGS/traces/kernelslist.g
 sim_run_*
 *.DS_Store*
 *.csv
