@@ -294,8 +294,12 @@ void memory_config::reg_options(class OptionParser *opp) {
       "4:2:8:12:21:13:34:9:4:5:13:1:0:0");
   option_parser_register(opp, "-gpgpu_l2_rop_latency", OPT_UINT32, &rop_latency,
                          "ROP queue latency (default 85)", "85");
+  option_parser_register(opp, "-l2_instr_verif_lat", OPT_UINT32, &l2_instr_verif_lat,
+                         "L2 instruction verification latency (default 0)", "0");
   option_parser_register(opp, "-dram_latency", OPT_UINT32, &dram_latency,
                          "DRAM latency (default 30)", "30");
+  option_parser_register(opp, "-dram_instr_verif_lat", OPT_UINT32, &dram_instr_verif_lat,
+                         "DRAM instruction verification latency (default 0)", "0");
   option_parser_register(opp, "-dram_dual_bus_interface", OPT_UINT32,
                          &dual_bus_interface,
                          "dual_bus_interface (default = 0) ", "0");

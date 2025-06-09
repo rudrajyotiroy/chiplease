@@ -1002,6 +1002,8 @@ void shader_core_ctx::fetch() {
                 (new_addr_type)ppc, mf,
                 m_gpu->gpu_sim_cycle + m_gpu->gpu_tot_sim_cycle, events);
 
+          //Rudra L1-I access miss/hit conditions here
+
           if (status == MISS) {
             m_last_warp_fetched = warp_id;
             m_warp[warp_id]->set_imiss_pending();

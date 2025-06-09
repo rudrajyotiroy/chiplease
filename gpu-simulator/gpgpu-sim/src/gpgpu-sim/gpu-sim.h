@@ -341,6 +341,8 @@ class memory_config {
 
   unsigned rop_latency;
   unsigned dram_latency;
+  unsigned l2_instr_verif_lat;
+  unsigned dram_instr_verif_lat;
 
   // DRAM parameters
 

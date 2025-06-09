@@ -293,6 +293,10 @@ void memory_partition_unit::simple_dram_model_cycle() {
       d.req = mf;
       d.ready_cycle = m_gpu->gpu_sim_cycle + m_gpu->gpu_tot_sim_cycle +
                       m_config->dram_latency;
+      if(mf->get_access_type() == INST_ACC_R){
+        // Rudra if INST accessed then add delay
+        d.ready_cycle += m_config->dram_instr_verif_lat;
+      }
       m_dram_latency_queue.push_back(d);
       mf->set_status(IN_PARTITION_DRAM_LATENCY_QUEUE,
                      m_gpu->gpu_sim_cycle + m_gpu->gpu_tot_sim_cycle);
@@ -355,6 +359,10 @@ void memory_partition_unit::dram_cycle() {
       d.req = mf;
       d.ready_cycle = m_gpu->gpu_sim_cycle + m_gpu->gpu_tot_sim_cycle +
                       m_config->dram_latency;
+      if(mf->get_access_type() == INST_ACC_R){
+        // Rudra if INST accessed then add delay
+        d.ready_cycle += m_config->dram_instr_verif_lat;
+      }
       m_dram_latency_queue.push_back(d);
       mf->set_status(IN_PARTITION_DRAM_LATENCY_QUEUE,
                      m_gpu->gpu_sim_cycle + m_gpu->gpu_tot_sim_cycle);
@@ -803,6 +811,10 @@ void memory_sub_partition::push(mem_fetch *m_req, unsigned long long cycle) {
         rop_delay_t r;
         r.req = req;
         r.ready_cycle = cycle + m_config->rop_latency;
+        if(req->get_access_type() == INST_ACC_R){
+          // Rudra if INST accessed then add delay
+          r.ready_cycle += m_config->l2_instr_verif_lat;
+        }
         m_rop.push(r);
         req->set_status(IN_PARTITION_ROP_DELAY,
                         m_gpu->gpu_sim_cycle + m_gpu->gpu_tot_sim_cycle);
