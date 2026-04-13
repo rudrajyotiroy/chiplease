@@ -65,8 +65,11 @@ file(WRITE ${CMAKE_BINARY_DIR}/accelsim_version.h "const char *g_accelsim_versio
 add_subdirectory($ENV{GPGPUSIM_ROOT})
 add_subdirectory(trace-driven)
 add_subdirectory(trace-parser)
-add_subdirectory(extern/pybind11)
+option(BUILD_PYTHON_MODULE "Build the pybind11 Python module (requires Python dev headers)" OFF)
 
+if(BUILD_PYTHON_MODULE)
+    add_subdirectory(extern/pybind11)
+endif()
 
 include_directories($ENV{CUDA_INSTALL_PATH}/include)
 include_directories($ENV{GPGPUSIM_ROOT}/libcuda)
@@ -82,16 +85,18 @@ target_link_libraries(accel-sim.out PUBLIC cuda ptxsim gpgpusim intersim accelwa
 target_link_libraries(accel-sim.out PUBLIC -lm -lz -lGL -pthread)
 target_link_libraries(accel-sim.out PUBLIC trace-driven trace-parser)
 
-pybind11_add_module(accel_sim ./accel-sim.cc ./python_wrapper/python_wrapper.cc)
-target_link_libraries(accel_sim PRIVATE cuda ptxsim gpgpusim intersim accelwattch entrypoint)
-target_link_libraries(accel_sim PRIVATE trace-driven trace-parser)
+if(BUILD_PYTHON_MODULE)
+    pybind11_add_module(accel_sim ./accel-sim.cc ./python_wrapper/python_wrapper.cc)
+    target_link_libraries(accel_sim PRIVATE cuda ptxsim gpgpusim intersim accelwattch entrypoint)
+    target_link_libraries(accel_sim PRIVATE trace-driven trace-parser)
 
-# allow failure for stubgen
-add_custom_target(gen_pyi ALL
-    COMMAND $ENV{HOME}/.local/bin/stubgen -m accel_sim -o . || (exit 0)
-    DEPENDS accel_sim
-    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-    )
+    # allow failure for stubgen
+    add_custom_target(gen_pyi ALL
+        COMMAND $ENV{HOME}/.local/bin/stubgen -m accel_sim -o . || (exit 0)
+        DEPENDS accel_sim
+        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+        )
+endif()
 
 
 install(TARGETS accel-sim.out DESTINATION ${CMAKE_SOURCE_DIR}/bin/$ENV{ACCELSIM_CONFIG})

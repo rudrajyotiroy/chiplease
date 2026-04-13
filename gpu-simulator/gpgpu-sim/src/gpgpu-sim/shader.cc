@@ -4719,6 +4719,7 @@ void simt_core_cluster::icnt_cycle() {
       // instruction fetch response
       if (!m_core[cid]->fetch_unit_response_buffer_full()) {
         m_response_fifo.pop_front();
+        m_memory_stats->memlatstat_instr_done(mf);
         m_core[cid]->accept_fetch_response(mf);
       }
     } else {
@@ -4758,6 +4759,7 @@ void sst_simt_core_cluster::icnt_cycle_SST() {
       // instruction fetch response
       if (!m_core[cid]->fetch_unit_response_buffer_full()) {
         m_response_fifo.pop_front();
+        m_memory_stats->memlatstat_instr_done(mf);
         m_core[cid]->accept_fetch_response(mf);
       }
     } else {

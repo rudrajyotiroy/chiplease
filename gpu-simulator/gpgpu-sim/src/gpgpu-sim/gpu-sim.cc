@@ -300,6 +300,10 @@ void memory_config::reg_options(class OptionParser *opp) {
                          "DRAM latency (default 30)", "30");
   option_parser_register(opp, "-dram_instr_verif_lat", OPT_UINT32, &dram_instr_verif_lat,
                          "DRAM instruction verification latency (default 0)", "0");
+  option_parser_register(opp, "-l2_data_verif_lat", OPT_UINT32, &l2_data_verif_lat,
+                         "L2 data verification latency (default 0)", "0");
+  option_parser_register(opp, "-dram_data_verif_lat", OPT_UINT32, &dram_data_verif_lat,
+                         "DRAM data verification latency (default 0)", "0");
   option_parser_register(opp, "-dram_dual_bus_interface", OPT_UINT32,
                          &dual_bus_interface,
                          "dual_bus_interface (default = 0) ", "0");

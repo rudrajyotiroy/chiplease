@@ -108,6 +108,8 @@ memory_stats_t::memory_stats_t(unsigned n_shader,
                       // mf_num_lat_pw to obtain average latency Per Window
   mf_total_lat = 0;
   num_mfs = 0;
+  instr_total_lat = 0;
+  num_instr_mfs = 0;
   printf("*** Initializing Memory Statistics ***\n");
   totalbankreads =
       (unsigned int **)calloc(mem_config->m_n_mem, sizeof(unsigned int *));
@@ -227,6 +229,15 @@ void memory_stats_t::memlatstat_read_done(mem_fetch *mf) {
   }
 }
 
+void memory_stats_t::memlatstat_instr_done(mem_fetch *mf) {
+  if (m_memory_config->gpgpu_memlatency_stat) {
+    unsigned mf_latency =
+        (m_gpu->gpu_sim_cycle + m_gpu->gpu_tot_sim_cycle) - mf->get_timestamp();
+    instr_total_lat += mf_latency;
+    num_instr_mfs++;
+  }
+}
+
 void memory_stats_t::memlatstat_dram_access(mem_fetch *mf) {
   unsigned dram_id = mf->get_tlx_addr().chip;
   unsigned bank = mf->get_tlx_addr().bk;
@@ -299,6 +310,15 @@ void memory_stats_t::memlatstat_print(unsigned n_mem, unsigned gpu_mem_n_bk) {
         printf("avg_mrq_latency = %lld \n", tot_mrq_latency / tot_mrq_num);
 
       printf("avg_icnt2sh_latency = %lld \n", tot_icnt2sh_latency / num_mfs);
+    }
+    if (num_instr_mfs) {
+      printf("avg_instr_fetch_latency = %lld \n", instr_total_lat / num_instr_mfs);
+    }
+    {
+      unsigned long long combined_lat = mf_total_lat + instr_total_lat;
+      unsigned combined_mfs = num_mfs + num_instr_mfs;
+      if (combined_mfs)
+        printf("avg_dram_amat = %lld \n", combined_lat / combined_mfs);
     }
     printf("mrq_lat_table:");
     for (i = 0; i < 32; i++) {

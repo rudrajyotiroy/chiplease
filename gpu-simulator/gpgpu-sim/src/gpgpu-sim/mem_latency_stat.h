@@ -42,6 +42,7 @@ class memory_stats_t {
 
   unsigned memlatstat_done(class mem_fetch *mf);
   void memlatstat_read_done(class mem_fetch *mf);
+  void memlatstat_instr_done(class mem_fetch *mf);
   void memlatstat_dram_access(class mem_fetch *mf);
   void memlatstat_icnt2mem_pop(class mem_fetch *mf);
   void memlatstat_lat_pw();
@@ -83,6 +84,9 @@ class memory_stats_t {
       *mf_total_lat_table;      // mf latency sums[dram chip id][bank id]
   unsigned **mf_max_lat_table;  // mf latency sums[dram chip id][bank id]
   unsigned num_mfs;
+  // instruction fetch DRAM latency tracking (separate from data)
+  unsigned long long int instr_total_lat;
+  unsigned num_instr_mfs;
   unsigned int ***bankwrites;  // bankwrites[shader id][dram chip id][bank id]
   unsigned int ***bankreads;   // bankreads[shader id][dram chip id][bank id]
   unsigned int **totalbankwrites;    // bankwrites[dram chip id][bank id]

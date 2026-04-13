@@ -296,6 +296,9 @@ void memory_partition_unit::simple_dram_model_cycle() {
       if(mf->get_access_type() == INST_ACC_R){
         // Rudra if INST accessed then add delay
         d.ready_cycle += m_config->dram_instr_verif_lat;
+      } else {
+        // data access: encrypt on write (wrbk), decrypt on read
+        d.ready_cycle += m_config->dram_data_verif_lat;
       }
       m_dram_latency_queue.push_back(d);
       mf->set_status(IN_PARTITION_DRAM_LATENCY_QUEUE,
@@ -362,6 +365,9 @@ void memory_partition_unit::dram_cycle() {
       if(mf->get_access_type() == INST_ACC_R){
         // Rudra if INST accessed then add delay
         d.ready_cycle += m_config->dram_instr_verif_lat;
+      } else {
+        // data access: encrypt on write (wrbk), decrypt on read
+        d.ready_cycle += m_config->dram_data_verif_lat;
       }
       m_dram_latency_queue.push_back(d);
       mf->set_status(IN_PARTITION_DRAM_LATENCY_QUEUE,
@@ -659,6 +665,16 @@ void memory_stats_t::visualizer_print(gzFile visualizer_file) {
   if (num_mfs)
     gzprintf(visualizer_file, "averagemflatency: %lld\n",
              mf_total_lat / num_mfs);
+  if (num_instr_mfs)
+    gzprintf(visualizer_file, "avg_instr_fetch_latency: %lld\n",
+             instr_total_lat / num_instr_mfs);
+  {
+    unsigned long long combined_lat = mf_total_lat + instr_total_lat;
+    unsigned combined_mfs = num_mfs + num_instr_mfs;
+    if (combined_mfs)
+      gzprintf(visualizer_file, "avg_dram_amat: %lld\n",
+               combined_lat / combined_mfs);
+  }
 }
 
 void memory_stats_t::clear_L2_stats_pw() {
@@ -814,6 +830,9 @@ void memory_sub_partition::push(mem_fetch *m_req, unsigned long long cycle) {
         if(req->get_access_type() == INST_ACC_R){
           // Rudra if INST accessed then add delay
           r.ready_cycle += m_config->l2_instr_verif_lat;
+        } else {
+          // data access: encrypt on write, decrypt on read
+          r.ready_cycle += m_config->l2_data_verif_lat;
         }
         m_rop.push(r);
         req->set_status(IN_PARTITION_ROP_DELAY,
