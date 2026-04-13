@@ -1,0 +1,93 @@
+# HPC benchmark suite definitions for chiplease experiments
+# Benchmarks: LAMMPS, Branson, HYPRE, SPARTA, Genomebench
+#
+# Environment variables expected:
+#   HPC_APPS_ROOT    - root directory where benchmarks are built (see benchmarks/setup_benchmarks.sh)
+#   CUDA_VERSION     - CUDA version string, e.g. "11.0"
+#
+# Executable paths follow the pattern: $HPC_APPS_ROOT/bin/<app>
+# Input data dirs:                      $HPC_APPS_ROOT/data/<app>/
+
+# ---------------------------------------------------------------------------
+# LAMMPS — Large-scale Atomic/Molecular Massively Parallel Simulator
+# GPU package: CUDA-accelerated pair potentials (Lennard-Jones + Tersoff)
+# Representative inputs: LJ liquid (small/medium) and EAM metal benchmark
+# ---------------------------------------------------------------------------
+lammps:
+    exec_dir: "$HPC_APPS_ROOT/bin/"
+    data_dirs: "$HPC_APPS_ROOT/data/lammps/"
+    execs:
+        - lmp:
+            - args: -sf gpu -pk gpu 1 -in in.lj.small
+              accel-sim-mem: 2G
+            - args: -sf gpu -pk gpu 1 -in in.lj.medium
+              accel-sim-mem: 4G
+            - args: -sf gpu -pk gpu 1 -in in.eam
+              accel-sim-mem: 4G
+
+# ---------------------------------------------------------------------------
+# Branson — Monte Carlo radiation transport proxy app (LANL)
+# Uses CUDA for GPU-accelerated particle transport
+# Input: XML problem description files (sphere and hohlraum geometries)
+# ---------------------------------------------------------------------------
+branson:
+    exec_dir: "$HPC_APPS_ROOT/bin/"
+    data_dirs: "$HPC_APPS_ROOT/data/branson/"
+    execs:
+        - BRANSON:
+            - args: sphere_input.xml
+              accel-sim-mem: 2G
+            - args: hohlraum_input.xml
+              accel-sim-mem: 4G
+
+# ---------------------------------------------------------------------------
+# HYPRE — Scalable linear solvers and multigrid methods (LLNL)
+# GPU support via CUDA (AMG, PCG, struct solvers)
+# Representative: ij AMG solver, struct solver on 3D problem
+# ---------------------------------------------------------------------------
+hypre:
+    exec_dir: "$HPC_APPS_ROOT/bin/"
+    data_dirs: "$HPC_APPS_ROOT/data/hypre/"
+    execs:
+        - ij:
+            - args: -solver 0 -n 50 50 50 -P 1 1 1
+              accel-sim-mem: 2G
+            - args: -solver 1 -n 100 100 100 -P 1 1 1
+              accel-sim-mem: 4G
+        - struct:
+            - args: -n 32 32 32 -solver 0
+              accel-sim-mem: 2G
+
+# ---------------------------------------------------------------------------
+# SPARTA — Direct Simulation Monte Carlo (DSMC) solver
+# GPU support via Kokkos+CUDA backend
+# Representative: supersonic flow over a sphere
+# ---------------------------------------------------------------------------
+sparta:
+    exec_dir: "$HPC_APPS_ROOT/bin/"
+    data_dirs: "$HPC_APPS_ROOT/data/sparta/"
+    execs:
+        - spa_kokkos_cuda:
+            - args: -k on g 1 -sf kk -in in.sphere.small
+              accel-sim-mem: 2G
+            - args: -k on g 1 -sf kk -in in.sphere.medium
+              accel-sim-mem: 4G
+
+# ---------------------------------------------------------------------------
+# Genomebench — GPU-accelerated genomics benchmarks (joydddd)
+# Includes: ADEPT (sequence alignment), Chain (chaining), SeqAlign, ksw2
+# Each is a standalone CUDA application
+# ---------------------------------------------------------------------------
+genomebench:
+    exec_dir: "$HPC_APPS_ROOT/bin/"
+    data_dirs: "$HPC_APPS_ROOT/data/genomebench/"
+    execs:
+        - adept-gpu:
+            - args: query.fasta ref.fasta output.txt
+              accel-sim-mem: 4G
+        - chain-gpu:
+            - args: reads.paf output.chain
+              accel-sim-mem: 2G
+        - seqalign-gpu:
+            - args: --query query.fasta --ref ref.fasta
+              accel-sim-mem: 4G
