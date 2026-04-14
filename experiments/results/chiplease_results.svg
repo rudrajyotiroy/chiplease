@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="920" viewBox="0 0 1400 920">
+<rect width="100%" height="100%" fill="#fafafa"/>
+<text x="700.0" y="28" text-anchor="middle" font-size="22" font-family="sans-serif">Chiplease Experiment Results</text>
+<text x="700.0" y="92" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#555555">Derived from existing sim.log files in experiments/results</text>
+<line x1="60" y1="55" x2="88" y2="55" stroke="#1f77b4" stroke-width="3"/><circle cx="74" cy="55" r="4" fill="#1f77b4"/><text x="98" y="59" font-size="12" font-family="sans-serif">lammps/lmp/lj_gpu</text><line x1="560" y1="55" x2="588" y2="55" stroke="#d62728" stroke-width="3"/><circle cx="574" cy="55" r="4" fill="#d62728"/><text x="598" y="59" font-size="12" font-family="sans-serif">ubench/l1_bw_32f_unroll_large/NO_ARGS</text>
+<rect x="40" y="120" width="650" height="320" fill="white" stroke="#cccccc"/>
+<text x="365.0" y="142" text-anchor="middle" font-size="16" font-family="sans-serif">Simulation Cycles</text>
+<text x="58" y="280.0" text-anchor="middle" transform="rotate(-90 58 280.0)" font-size="12" font-family="sans-serif">Cycles</text>
+<line x1="110" y1="380.00" x2="670" y2="380.00" stroke="#e6e6e6"/>
+<text x="102" y="384.00" text-anchor="end" font-size="11" font-family="sans-serif">55824.48</text>
+<line x1="110" y1="323.75" x2="670" y2="323.75" stroke="#e6e6e6"/>
+<text x="102" y="327.75" text-anchor="end" font-size="11" font-family="sans-serif">87350.24</text>
+<line x1="110" y1="267.50" x2="670" y2="267.50" stroke="#e6e6e6"/>
+<text x="102" y="271.50" text-anchor="end" font-size="11" font-family="sans-serif">118876.00</text>
+<line x1="110" y1="211.25" x2="670" y2="211.25" stroke="#e6e6e6"/>
+<text x="102" y="215.25" text-anchor="end" font-size="11" font-family="sans-serif">150401.76</text>
+<line x1="110" y1="155.00" x2="670" y2="155.00" stroke="#e6e6e6"/>
+<text x="102" y="159.00" text-anchor="end" font-size="11" font-family="sans-serif">181927.52</text>
+<line x1="110.00" y1="155" x2="110.00" y2="380" stroke="#f3f3f3"/>
+<text x="110.00" y="404" text-anchor="end" transform="rotate(-20 110.00 404)" font-size="11" font-family="sans-serif">Baseline</text>
+<line x1="296.67" y1="155" x2="296.67" y2="380" stroke="#f3f3f3"/>
+<text x="296.67" y="404" text-anchor="end" transform="rotate(-20 296.67 404)" font-size="11" font-family="sans-serif">Instr DRAM +20</text>
+<line x1="483.33" y1="155" x2="483.33" y2="380" stroke="#f3f3f3"/>
+<text x="483.33" y="404" text-anchor="end" transform="rotate(-20 483.33 404)" font-size="11" font-family="sans-serif">Instr+Data DRAM +20</text>
+<line x1="670.00" y1="155" x2="670.00" y2="380" stroke="#f3f3f3"/>
+<text x="670.00" y="404" text-anchor="end" transform="rotate(-20 670.00 404)" font-size="11" font-family="sans-serif">Instr+Data DRAM +10</text>
+<line x1="110" y1="155" x2="110" y2="380" stroke="#555555"/>
+<line x1="110" y1="380" x2="670" y2="380" stroke="#555555"/>
+<polyline fill="none" stroke="#1f77b4" stroke-width="2.5" points="110.00,358.23 296.67,358.05 483.33,358.05 670.00,358.14"/>
+<circle cx="110.00" cy="358.23" r="4" fill="#1f77b4"/>
+<text x="110.00" y="350.23" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#1f77b4">68028.00</text>
+<circle cx="296.67" cy="358.05" r="4" fill="#1f77b4"/>
+<text x="296.67" y="350.05" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#1f77b4">68128.00</text>
+<circle cx="483.33" cy="358.05" r="4" fill="#1f77b4"/>
+<text x="483.33" y="350.05" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#1f77b4">68128.00</text>
+<circle cx="670.00" cy="358.14" r="4" fill="#1f77b4"/>
+<text x="670.00" y="350.14" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#1f77b4">68078.00</text>
+<polyline fill="none" stroke="#d62728" stroke-width="2.5" points="110.00,178.40 296.67,176.77 483.33,177.93 670.00,178.01"/>
+<circle cx="110.00" cy="178.40" r="4" fill="#d62728"/>
+<text x="110.00" y="170.40" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#d62728">168814.00</text>
+<circle cx="296.67" cy="176.77" r="4" fill="#d62728"/>
+<text x="296.67" y="168.77" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#d62728">169724.00</text>
+<circle cx="483.33" cy="177.93" r="4" fill="#d62728"/>
+<text x="483.33" y="169.93" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#d62728">169079.00</text>
+<circle cx="670.00" cy="178.01" r="4" fill="#d62728"/>
+<text x="670.00" y="170.01" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#d62728">169034.00</text><rect x="710" y="120" width="650" height="320" fill="white" stroke="#cccccc"/>
+<text x="1035.0" y="142" text-anchor="middle" font-size="16" font-family="sans-serif">IPC</text>
+<text x="728" y="280.0" text-anchor="middle" transform="rotate(-90 728 280.0)" font-size="12" font-family="sans-serif">IPC</text>
+<line x1="780" y1="380.00" x2="1340" y2="380.00" stroke="#e6e6e6"/>
+<text x="772" y="384.00" text-anchor="end" font-size="11" font-family="sans-serif">-6.30</text>
+<line x1="780" y1="323.75" x2="1340" y2="323.75" stroke="#e6e6e6"/>
+<text x="772" y="327.75" text-anchor="end" font-size="11" font-family="sans-serif">10.63</text>
+<line x1="780" y1="267.50" x2="1340" y2="267.50" stroke="#e6e6e6"/>
+<text x="772" y="271.50" text-anchor="end" font-size="11" font-family="sans-serif">27.56</text>
+<line x1="780" y1="211.25" x2="1340" y2="211.25" stroke="#e6e6e6"/>
+<text x="772" y="215.25" text-anchor="end" font-size="11" font-family="sans-serif">44.49</text>
+<line x1="780" y1="155.00" x2="1340" y2="155.00" stroke="#e6e6e6"/>
+<text x="772" y="159.00" text-anchor="end" font-size="11" font-family="sans-serif">61.42</text>
+<line x1="780.00" y1="155" x2="780.00" y2="380" stroke="#f3f3f3"/>
+<text x="780.00" y="404" text-anchor="end" transform="rotate(-20 780.00 404)" font-size="11" font-family="sans-serif">Baseline</text>
+<line x1="966.67" y1="155" x2="966.67" y2="380" stroke="#f3f3f3"/>
+<text x="966.67" y="404" text-anchor="end" transform="rotate(-20 966.67 404)" font-size="11" font-family="sans-serif">Instr DRAM +20</text>
+<line x1="1153.33" y1="155" x2="1153.33" y2="380" stroke="#f3f3f3"/>
+<text x="1153.33" y="404" text-anchor="end" transform="rotate(-20 1153.33 404)" font-size="11" font-family="sans-serif">Instr+Data DRAM +20</text>
+<line x1="1340.00" y1="155" x2="1340.00" y2="380" stroke="#f3f3f3"/>
+<text x="1340.00" y="404" text-anchor="end" transform="rotate(-20 1340.00 404)" font-size="11" font-family="sans-serif">Instr+Data DRAM +10</text>
+<line x1="780" y1="155" x2="780" y2="380" stroke="#555555"/>
+<line x1="780" y1="380" x2="1340" y2="380" stroke="#555555"/>
+<polyline fill="none" stroke="#1f77b4" stroke-width="2.5" points="780.00,358.22 966.67,358.23 1153.33,358.23 1340.00,358.23"/>
+<circle cx="780.00" cy="358.22" r="4" fill="#1f77b4"/>
+<text x="780.00" y="350.22" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#1f77b4">0.25</text>
+<circle cx="966.67" cy="358.23" r="4" fill="#1f77b4"/>
+<text x="966.67" y="350.23" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#1f77b4">0.25</text>
+<circle cx="1153.33" cy="358.23" r="4" fill="#1f77b4"/>
+<text x="1153.33" y="350.23" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#1f77b4">0.25</text>
+<circle cx="1340.00" cy="358.23" r="4" fill="#1f77b4"/>
+<text x="1340.00" y="350.23" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#1f77b4">0.25</text>
+<polyline fill="none" stroke="#d62728" stroke-width="2.5" points="780.00,176.77 966.67,177.75 1153.33,177.06 1340.00,177.01"/>
+<circle cx="780.00" cy="176.77" r="4" fill="#d62728"/>
+<text x="780.00" y="168.77" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#d62728">54.87</text>
+<circle cx="966.67" cy="177.75" r="4" fill="#d62728"/>
+<text x="966.67" y="169.75" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#d62728">54.57</text>
+<circle cx="1153.33" cy="177.06" r="4" fill="#d62728"/>
+<text x="1153.33" y="169.06" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#d62728">54.78</text>
+<circle cx="1340.00" cy="177.01" r="4" fill="#d62728"/>
+<text x="1340.00" y="169.01" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#d62728">54.79</text><rect x="40" y="500" width="650" height="320" fill="white" stroke="#cccccc"/>
+<text x="365.0" y="522" text-anchor="middle" font-size="16" font-family="sans-serif">Cycle Change vs Baseline</text>
+<text x="58" y="660.0" text-anchor="middle" transform="rotate(-90 58 660.0)" font-size="12" font-family="sans-serif">Percent</text>
+<line x1="110" y1="760.00" x2="670" y2="760.00" stroke="#e6e6e6"/>
+<text x="102" y="764.00" text-anchor="end" font-size="11" font-family="sans-serif">-0.06</text>
+<line x1="110" y1="703.75" x2="670" y2="703.75" stroke="#e6e6e6"/>
+<text x="102" y="707.75" text-anchor="end" font-size="11" font-family="sans-serif">0.10</text>
+<line x1="110" y1="647.50" x2="670" y2="647.50" stroke="#e6e6e6"/>
+<text x="102" y="651.50" text-anchor="end" font-size="11" font-family="sans-serif">0.27</text>
+<line x1="110" y1="591.25" x2="670" y2="591.25" stroke="#e6e6e6"/>
+<text x="102" y="595.25" text-anchor="end" font-size="11" font-family="sans-serif">0.44</text>
+<line x1="110" y1="535.00" x2="670" y2="535.00" stroke="#e6e6e6"/>
+<text x="102" y="539.00" text-anchor="end" font-size="11" font-family="sans-serif">0.60</text>
+<line x1="110" y1="738.23" x2="670" y2="738.23" stroke="#444444" stroke-dasharray="5,4"/>
+<line x1="110.00" y1="535" x2="110.00" y2="760" stroke="#f3f3f3"/>
+<text x="110.00" y="784" text-anchor="end" transform="rotate(-20 110.00 784)" font-size="11" font-family="sans-serif">Baseline</text>
+<line x1="296.67" y1="535" x2="296.67" y2="760" stroke="#f3f3f3"/>
+<text x="296.67" y="784" text-anchor="end" transform="rotate(-20 296.67 784)" font-size="11" font-family="sans-serif">Instr DRAM +20</text>
+<line x1="483.33" y1="535" x2="483.33" y2="760" stroke="#f3f3f3"/>
+<text x="483.33" y="784" text-anchor="end" transform="rotate(-20 483.33 784)" font-size="11" font-family="sans-serif">Instr+Data DRAM +20</text>
+<line x1="670.00" y1="535" x2="670.00" y2="760" stroke="#f3f3f3"/>
+<text x="670.00" y="784" text-anchor="end" transform="rotate(-20 670.00 784)" font-size="11" font-family="sans-serif">Instr+Data DRAM +10</text>
+<line x1="110" y1="535" x2="110" y2="760" stroke="#555555"/>
+<line x1="110" y1="760" x2="670" y2="760" stroke="#555555"/>
+<polyline fill="none" stroke="#1f77b4" stroke-width="2.5" points="110.00,738.23 296.67,688.74 483.33,688.74 670.00,713.49"/>
+<circle cx="110.00" cy="738.23" r="4" fill="#1f77b4"/>
+<text x="110.00" y="730.23" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#1f77b4">0.00</text>
+<circle cx="296.67" cy="688.74" r="4" fill="#1f77b4"/>
+<text x="296.67" y="680.74" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#1f77b4">0.15</text>
+<circle cx="483.33" cy="688.74" r="4" fill="#1f77b4"/>
+<text x="483.33" y="680.74" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#1f77b4">0.15</text>
+<circle cx="670.00" cy="713.49" r="4" fill="#1f77b4"/>
+<text x="670.00" y="705.49" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#1f77b4">0.07</text>
+<polyline fill="none" stroke="#d62728" stroke-width="2.5" points="110.00,738.23 296.67,556.77 483.33,685.39 670.00,694.36"/>
+<circle cx="110.00" cy="738.23" r="4" fill="#d62728"/>
+<text x="110.00" y="730.23" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#d62728">0.00</text>
+<circle cx="296.67" cy="556.77" r="4" fill="#d62728"/>
+<text x="296.67" y="548.77" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#d62728">0.54</text>
+<circle cx="483.33" cy="685.39" r="4" fill="#d62728"/>
+<text x="483.33" y="677.39" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#d62728">0.16</text>
+<circle cx="670.00" cy="694.36" r="4" fill="#d62728"/>
+<text x="670.00" y="686.36" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#d62728">0.13</text><rect x="710" y="500" width="650" height="320" fill="white" stroke="#cccccc"/>
+<text x="1035.0" y="522" text-anchor="middle" font-size="16" font-family="sans-serif">IPC Change vs Baseline</text>
+<text x="728" y="660.0" text-anchor="middle" transform="rotate(-90 728 660.0)" font-size="12" font-family="sans-serif">Percent</text>
+<line x1="780" y1="760.00" x2="1340" y2="760.00" stroke="#e6e6e6"/>
+<text x="772" y="764.00" text-anchor="end" font-size="11" font-family="sans-serif">-0.60</text>
+<line x1="780" y1="703.75" x2="1340" y2="703.75" stroke="#e6e6e6"/>
+<text x="772" y="707.75" text-anchor="end" font-size="11" font-family="sans-serif">-0.43</text>
+<line x1="780" y1="647.50" x2="1340" y2="647.50" stroke="#e6e6e6"/>
+<text x="772" y="651.50" text-anchor="end" font-size="11" font-family="sans-serif">-0.27</text>
+<line x1="780" y1="591.25" x2="1340" y2="591.25" stroke="#e6e6e6"/>
+<text x="772" y="595.25" text-anchor="end" font-size="11" font-family="sans-serif">-0.10</text>
+<line x1="780" y1="535.00" x2="1340" y2="535.00" stroke="#e6e6e6"/>
+<text x="772" y="539.00" text-anchor="end" font-size="11" font-family="sans-serif">0.06</text>
+<line x1="780" y1="556.77" x2="1340" y2="556.77" stroke="#444444" stroke-dasharray="5,4"/>
+<line x1="780.00" y1="535" x2="780.00" y2="760" stroke="#f3f3f3"/>
+<text x="780.00" y="784" text-anchor="end" transform="rotate(-20 780.00 784)" font-size="11" font-family="sans-serif">Baseline</text>
+<line x1="966.67" y1="535" x2="966.67" y2="760" stroke="#f3f3f3"/>
+<text x="966.67" y="784" text-anchor="end" transform="rotate(-20 966.67 784)" font-size="11" font-family="sans-serif">Instr DRAM +20</text>
+<line x1="1153.33" y1="535" x2="1153.33" y2="760" stroke="#f3f3f3"/>
+<text x="1153.33" y="784" text-anchor="end" transform="rotate(-20 1153.33 784)" font-size="11" font-family="sans-serif">Instr+Data DRAM +20</text>
+<line x1="1340.00" y1="535" x2="1340.00" y2="760" stroke="#f3f3f3"/>
+<text x="1340.00" y="784" text-anchor="end" transform="rotate(-20 1340.00 784)" font-size="11" font-family="sans-serif">Instr+Data DRAM +10</text>
+<line x1="780" y1="535" x2="780" y2="760" stroke="#555555"/>
+<line x1="780" y1="760" x2="1340" y2="760" stroke="#555555"/>
+<polyline fill="none" stroke="#1f77b4" stroke-width="2.5" points="780.00,556.77 966.67,611.05 1153.33,611.05 1340.00,583.91"/>
+<circle cx="780.00" cy="556.77" r="4" fill="#1f77b4"/>
+<text x="780.00" y="548.77" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#1f77b4">0.00</text>
+<circle cx="966.67" cy="611.05" r="4" fill="#1f77b4"/>
+<text x="966.67" y="603.05" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#1f77b4">-0.16</text>
+<circle cx="1153.33" cy="611.05" r="4" fill="#1f77b4"/>
+<text x="1153.33" y="603.05" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#1f77b4">-0.16</text>
+<circle cx="1340.00" cy="583.91" r="4" fill="#1f77b4"/>
+<text x="1340.00" y="575.91" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#1f77b4">-0.08</text>
+<polyline fill="none" stroke="#d62728" stroke-width="2.5" points="780.00,556.77 966.67,738.23 1153.33,609.82 1340.00,600.81"/>
+<circle cx="780.00" cy="556.77" r="4" fill="#d62728"/>
+<text x="780.00" y="548.77" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#d62728">0.00</text>
+<circle cx="966.67" cy="738.23" r="4" fill="#d62728"/>
+<text x="966.67" y="730.23" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#d62728">-0.54</text>
+<circle cx="1153.33" cy="609.82" r="4" fill="#d62728"/>
+<text x="1153.33" y="601.82" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#d62728">-0.16</text>
+<circle cx="1340.00" cy="600.81" r="4" fill="#d62728"/>
+<text x="1340.00" y="592.81" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#d62728">-0.13</text>
+</svg>

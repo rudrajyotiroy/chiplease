@@ -1,0 +1,16 @@
+Prior analysis found in scratch:
+- Existing script: /scratch/nsatish_root/nsatish0/rudraroy/accelsim_exp/plot_results.py
+- Existing plots: /scratch/nsatish_root/nsatish0/rudraroy/accelsim_exp/plots
+- Existing CSV only covered workloads with fully completed sim.log files at that time.
+
+Completed workloads included in this analysis:
+- OpenPCDet
+- GASAL2
+- Clara Genomics
+
+Remaining workloads not included because sim.log is incomplete or invalid:
+- Flash Attention (0/4 complete)
+- MLCommons ResNet (0/4 complete)
+- GPUDrive (0/4 complete)
+- LAMMPS (0/4 complete)
+- OpenMM (0/4 complete)

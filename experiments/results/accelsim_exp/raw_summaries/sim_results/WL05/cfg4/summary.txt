@@ -1,0 +1,7 @@
+workload:          WL05
+config:            cfg4 (instr=20,data=20)
+exit_code:         0
+gpu_sim_cycle:     91555
+gpu_ipc:           3934.0479
+gpu_tot_sim_cycle: 91555
+gpu_tot_ipc:       3934.0479

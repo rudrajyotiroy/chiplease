@@ -1,0 +1,24 @@
+OpenPCDet | cfg1 | sim.log: /scratch/nsatish_root/nsatish0/rudraroy/accelsim_exp/sim_results/WL05/cfg1/sim.log
+OpenPCDet | cfg1 | summary.txt: /scratch/nsatish_root/nsatish0/rudraroy/accelsim_exp/sim_results/WL05/cfg1/summary.txt
+OpenPCDet | cfg2 | sim.log: /scratch/nsatish_root/nsatish0/rudraroy/accelsim_exp/sim_results/WL05/cfg2/sim.log
+OpenPCDet | cfg2 | summary.txt: /scratch/nsatish_root/nsatish0/rudraroy/accelsim_exp/sim_results/WL05/cfg2/summary.txt
+OpenPCDet | cfg3 | sim.log: /scratch/nsatish_root/nsatish0/rudraroy/accelsim_exp/sim_results/WL05/cfg3/sim.log
+OpenPCDet | cfg3 | summary.txt: /scratch/nsatish_root/nsatish0/rudraroy/accelsim_exp/sim_results/WL05/cfg3/summary.txt
+OpenPCDet | cfg4 | sim.log: /scratch/nsatish_root/nsatish0/rudraroy/accelsim_exp/sim_results/WL05/cfg4/sim.log
+OpenPCDet | cfg4 | summary.txt: /scratch/nsatish_root/nsatish0/rudraroy/accelsim_exp/sim_results/WL05/cfg4/summary.txt
+GASAL2 | cfg1 | sim.log: /scratch/nsatish_root/nsatish0/rudraroy/accelsim_exp/sim_results/WL10/cfg1/sim.log
+GASAL2 | cfg1 | summary.txt: /scratch/nsatish_root/nsatish0/rudraroy/accelsim_exp/sim_results/WL10/cfg1/summary.txt
+GASAL2 | cfg2 | sim.log: /scratch/nsatish_root/nsatish0/rudraroy/accelsim_exp/sim_results/WL10/cfg2/sim.log
+GASAL2 | cfg2 | summary.txt: /scratch/nsatish_root/nsatish0/rudraroy/accelsim_exp/sim_results/WL10/cfg2/summary.txt
+GASAL2 | cfg3 | sim.log: /scratch/nsatish_root/nsatish0/rudraroy/accelsim_exp/sim_results/WL10/cfg3/sim.log
+GASAL2 | cfg3 | summary.txt: /scratch/nsatish_root/nsatish0/rudraroy/accelsim_exp/sim_results/WL10/cfg3/summary.txt
+GASAL2 | cfg4 | sim.log: /scratch/nsatish_root/nsatish0/rudraroy/accelsim_exp/sim_results/WL10/cfg4/sim.log
+GASAL2 | cfg4 | summary.txt: /scratch/nsatish_root/nsatish0/rudraroy/accelsim_exp/sim_results/WL10/cfg4/summary.txt
+Clara Genomics | cfg1 | sim.log: /scratch/nsatish_root/nsatish0/rudraroy/accelsim_exp/sim_results/WL11/cfg1/sim.log
+Clara Genomics | cfg1 | summary.txt: /scratch/nsatish_root/nsatish0/rudraroy/accelsim_exp/sim_results/WL11/cfg1/summary.txt
+Clara Genomics | cfg2 | sim.log: /scratch/nsatish_root/nsatish0/rudraroy/accelsim_exp/sim_results/WL11/cfg2/sim.log
+Clara Genomics | cfg2 | summary.txt: /scratch/nsatish_root/nsatish0/rudraroy/accelsim_exp/sim_results/WL11/cfg2/summary.txt
+Clara Genomics | cfg3 | sim.log: /scratch/nsatish_root/nsatish0/rudraroy/accelsim_exp/sim_results/WL11/cfg3/sim.log
+Clara Genomics | cfg3 | summary.txt: /scratch/nsatish_root/nsatish0/rudraroy/accelsim_exp/sim_results/WL11/cfg3/summary.txt
+Clara Genomics | cfg4 | sim.log: /scratch/nsatish_root/nsatish0/rudraroy/accelsim_exp/sim_results/WL11/cfg4/sim.log
+Clara Genomics | cfg4 | summary.txt: /scratch/nsatish_root/nsatish0/rudraroy/accelsim_exp/sim_results/WL11/cfg4/summary.txt

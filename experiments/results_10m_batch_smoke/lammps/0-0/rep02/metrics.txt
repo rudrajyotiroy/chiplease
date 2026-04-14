@@ -1,0 +1,14 @@
+timestamp=2026-04-08T21:32:29-04:00
+exit_code=0
+gpu_sim_cycle = 5570
+gpu_ipc =       0.2763
+gpu_tot_sim_cycle = 56888
+gpu_tot_ipc =       0.2441
+gpu_sim_cycle = 5570
+gpu_ipc =       0.2763
+gpu_tot_sim_cycle = 62458
+gpu_tot_ipc =       0.2470
+gpu_sim_cycle = 5570
+gpu_ipc =       0.2763
+gpu_tot_sim_cycle = 68028
+gpu_tot_ipc =       0.2494

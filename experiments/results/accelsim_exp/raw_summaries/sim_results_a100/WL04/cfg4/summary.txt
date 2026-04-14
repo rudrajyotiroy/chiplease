@@ -1,0 +1,6 @@
+workload:          WL04
+config:            cfg4 (instr=20,data=20)
+arch:              A100
+exit_code:         0
+gpu_tot_sim_cycle: 22615
+gpu_tot_ipc:       307.1773

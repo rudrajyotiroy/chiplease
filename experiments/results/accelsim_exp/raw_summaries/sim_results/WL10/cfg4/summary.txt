@@ -1,0 +1,4 @@
+workload: WL10
+config: cfg4 (instr=20,data=20)
+gpu_tot_sim_cycle: 30616
+gpu_tot_ipc: 285.6116

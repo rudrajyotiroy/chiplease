@@ -1,0 +1,8 @@
+workload=lammps
+case=0-0
+repetition=02
+trace=/home/rudraroy/chiplease/hw_run/hpc/lammps/11.8/lmp/lj_gpu/traces/kernelslist.g
+exp_cfg=/home/rudraroy/chiplease/experiments/configs/exp1_baseline.config
+max_cfg=/home/rudraroy/chiplease/experiments/configs/max_10m_cycles.config
+host=gl3044.arc-ts.umich.edu
+start=2026-04-08T21:31:29-04:00

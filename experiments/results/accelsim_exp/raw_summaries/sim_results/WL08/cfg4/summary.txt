@@ -1,0 +1,7 @@
+workload:          WL08
+config:            cfg4 (instr=20,data=20)
+exit_code:         0
+gpu_sim_cycle:     N/A
+gpu_ipc:           N/A
+gpu_tot_sim_cycle: N/A
+gpu_tot_ipc:       N/A

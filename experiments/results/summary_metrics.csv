@@ -1,0 +1,9 @@
+suite,app,args,experiment,experiment_label,gpu_sim_cycle,gpu_ipc,gpu_tot_sim_cycle,gpu_tot_ipc,log_path
+lammps,lmp,lj_gpu,exp1_baseline,Baseline,5570,0.2763,68028,0.2494,/home/rudraroy/chiplease/experiments/results/lammps/lmp/lj_gpu/exp1_baseline/sim.log
+lammps,lmp,lj_gpu,exp2_instr_dram20,Instr DRAM +20,5570,0.2763,68128,0.249,/home/rudraroy/chiplease/experiments/results/lammps/lmp/lj_gpu/exp2_instr_dram20/sim.log
+lammps,lmp,lj_gpu,exp3_both_dram20,Instr+Data DRAM +20,5570,0.2763,68128,0.249,/home/rudraroy/chiplease/experiments/results/lammps/lmp/lj_gpu/exp3_both_dram20/sim.log
+lammps,lmp,lj_gpu,exp4_both_dram10,Instr+Data DRAM +10,5570,0.2763,68078,0.2492,/home/rudraroy/chiplease/experiments/results/lammps/lmp/lj_gpu/exp4_both_dram10/sim.log
+ubench,l1_bw_32f_unroll_large,NO_ARGS,exp1_baseline,Baseline,168814,54.8656,168814,54.8656,/home/rudraroy/chiplease/experiments/results/ubench/l1_bw_32f_unroll_large/NO_ARGS/exp1_baseline/sim.log
+ubench,l1_bw_32f_unroll_large,NO_ARGS,exp2_instr_dram20,Instr DRAM +20,169724,54.5714,169724,54.5714,/home/rudraroy/chiplease/experiments/results/ubench/l1_bw_32f_unroll_large/NO_ARGS/exp2_instr_dram20/sim.log
+ubench,l1_bw_32f_unroll_large,NO_ARGS,exp3_both_dram20,Instr+Data DRAM +20,169079,54.7796,169079,54.7796,/home/rudraroy/chiplease/experiments/results/ubench/l1_bw_32f_unroll_large/NO_ARGS/exp3_both_dram20/sim.log
+ubench,l1_bw_32f_unroll_large,NO_ARGS,exp4_both_dram10,Instr+Data DRAM +10,169034,54.7942,169034,54.7942,/home/rudraroy/chiplease/experiments/results/ubench/l1_bw_32f_unroll_large/NO_ARGS/exp4_both_dram10/sim.log

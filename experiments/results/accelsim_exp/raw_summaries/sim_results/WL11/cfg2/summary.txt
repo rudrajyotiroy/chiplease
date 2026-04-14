@@ -1,0 +1,5 @@
+workload: WL11
+config: cfg2 (instr=20,data=0)
+exit_code: 0
+gpu_tot_sim_cycle: 123813
+gpu_tot_ipc: 7.3544
