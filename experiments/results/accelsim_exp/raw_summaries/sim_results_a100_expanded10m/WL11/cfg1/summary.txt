@@ -1,0 +1,6 @@
+workload:          WL11
+config:            cfg1
+arch:              A100
+exit_code:         0
+gpu_tot_sim_cycle: 10000000
+gpu_tot_ipc:       13.7262
